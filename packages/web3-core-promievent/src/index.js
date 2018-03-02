@@ -25,6 +25,10 @@
 var EventEmitter = require('eventemitter3');
 var Promise = require("bluebird");
 
+if (typeof window !== "undefined") {
+    window.BluebirdPromise = Promise
+}
+
 /**
  * This function generates a defer promise and adds eventEmitter functionality to it
  *
